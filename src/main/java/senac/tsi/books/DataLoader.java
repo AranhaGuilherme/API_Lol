@@ -3,6 +3,7 @@ package senac.tsi.books;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import senac.tsi.books.entities.Role;
 
 import senac.tsi.books.entities.*;
 import senac.tsi.books.repositories.*;
@@ -21,11 +22,11 @@ public class DataLoader {
         return args -> {
 
             // Players
-            playerRepo.save(new Player("Guilherme", "Kumo", "Mid"));
-            playerRepo.save(new Player("Carlos", "Flash", "Jungle"));
-            playerRepo.save(new Player("Ana", "Sniper", "ADC"));
-            playerRepo.save(new Player("Lucas", "Tanker", "Top"));
-            playerRepo.save(new Player("Bruno", "Shield", "Support"));
+            playerRepo.save(new Player("Guilherme", "Kumo", Role.MID));
+            playerRepo.save(new Player("Carlos", "Flash", Role.JUNGLE));
+            playerRepo.save(new Player("Ana", "Sniper", Role.ADC));
+            playerRepo.save(new Player("Lucas", "Tanker", Role.TOP));
+            playerRepo.save(new Player("Bruno", "Shield", Role.SUPPORT));
 
             // Champions
             championRepo.save(new Champion("Ahri", "Mid"));

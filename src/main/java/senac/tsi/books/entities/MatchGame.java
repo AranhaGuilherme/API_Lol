@@ -22,13 +22,12 @@ public class MatchGame {
     }
 
     public Long getId() { return id; }
-
     public String getTeamA() { return teamA; }
-    public void setTeamA(String teamA) { this.teamA = teamA; }
-
     public String getTeamB() { return teamB; }
-    public void setTeamB(String teamB) { this.teamB = teamB; }
-
     public String getWinner() { return winner; }
+
+    public void setId(Long id) { this.id = id; }
+    public void setTeamA(String teamA) { this.teamA = teamA; }
+    public void setTeamB(String teamB) { this.teamB = teamB; }
     public void setWinner(String winner) { this.winner = winner; }
 }
