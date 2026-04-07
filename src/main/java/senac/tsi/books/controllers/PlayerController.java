@@ -18,9 +18,9 @@ public class PlayerController {
 
     @GetMapping
     public Page<Player> listar(Pageable pageable) {
-        return repository.findAll(pageable)
-                .map(player -> org.springframework.hateoas.EntityModel.of(player));
+        return repository.findAll(pageable);
     }
+
 
     @PostMapping
     public Player criar(@RequestBody Player player) {
